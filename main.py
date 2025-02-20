@@ -16,7 +16,7 @@ if __name__ == "__main__":
         s = time.perf_counter()
 
     # start arbitrage detection
-    print("Scanning...")
+    print("Wait a bit to be a billionaire...")
     exchange_name = "binanceus"  # allow pickable exchange_id from https://github.com/ccxt/ccxt/wiki/manual#exchanges
 
     best_opportunities, best_profit = asyncio.run(detector.run_detection(exchange_name))
@@ -40,7 +40,7 @@ if __name__ == "__main__":
             base_currency = opportunity.symbol.base
             quote_currency = opportunity.symbol.quote
 
-            # Format the output as below (real live example):
+            # Below is the format of the output -> TODO: Update this format to show a proper table in the terminal.
             # -------------------------------------------
             # New 2.33873% binanceus opportunity:
             # 1. buy DOGE with BTC at 552486.18785
